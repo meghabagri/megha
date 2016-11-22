@@ -1,0 +1,31 @@
+#foot2
+{
+	width:100%;
+	top:-120px;
+	z-index:100;
+	position:relative;
+  float:bottom;
+}
+#elements-buttons
+{
+	width:1200px;
+	max-width:90%;
+	text-align:right;
+	height:auto;
+
+}
+#elements-buttons:hover{ color: black;}
+
+@media (max-width:480px){
+.logo{
+	float:center;
+	height: 5px;
+	width: 5px;
+	margin-left: -90px;
+}
+.text{margin-top: 150px; margin-left: 20px;}
+.service{width: 2px; height: 2px;}
+.heading{font-size: 20px;}
+html{overflow-y:scroll;}
+
+}
