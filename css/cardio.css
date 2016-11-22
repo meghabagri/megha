@@ -1,0 +1,403 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+html { overflow-y: hidden; }
+body {
+	font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	overflow-x: hidden;
+	background: url('../images/header.png');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* Preloader */
+
+.preloader {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-color: white;
+}
+
+
+.preloader img {
+	position: absolute;
+	top: calc(50% - 32px);
+	left: calc(50% - 32px);
+
+}
+/* Typography */
+
+p {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #8a8e91;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	position: relative;
+	color: white;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+.logo {
+	float:center;
+	position: relative;
+		padding-top : calc(3%);
+		height: 5px;
+		margin: :auto;
+display:block;
+}
+.text{
+	float:left;
+	position: relative;
+	display:block;
+}
+.nav{
+	width:100%;
+}
+header {
+	position: relative;
+	width: 100%;
+}
+
+ .table {
+	display: table;
+	height: 100%;
+}
+.header-text {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+}
+ .typed {
+	
+	text-align: center;
+	margin-top: 50px;
+	
+}
+
+
+.typed-cursor {
+	font-size: 60px;
+	display: inline-block;
+	margin: 0 10px;
+	color: #00a8ff;
+	-webkit-animation-name: flash;
+	animation-name: flash;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+a {
+	text-decoration: none;
+	color: #00a8ff;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* Blink Cursor */
+
+.blink {
+	position: relative;
+	top: 4px;
+	display: inline-block;
+	width: 4px;
+	height: 50px;
+	height: 5vh;
+	margin: 0 10px;
+}
+.container {
+	position: relative;
+	z-index: 1;
+}
+.icons{
+	display: block;
+	margin-top: 300px;
+}
+.material-icons { font-size: 48px; 
+}
+.services {
+	margin: 40px 0;
+}
+
+.service {
+	width: 100%;
+	height: 320px;
+	margin: 80px 0;
+	text-align: center;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.service .icon-holder {
+	position: relative;
+	top: 10px;
+	display: inline-block;
+	margin-bottom: 5px;
+	padding: 10px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.service .heading {
+	position: relative;
+	top: 5px;
+	  	background-color: transparent;
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.service .icon-holder > img.icon {
+	width: 40px;
+}
+
+.service:hover .icon-holder {
+	top: -30px;
+}
+
+.service:hover .heading {
+	top: -30px;
+}
+
+
+
+/* Footer */
+
+
+ .open-blink {
+	content: ' ';
+	position: relative;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0 20px;
+	border-radius: 50%;
+	background-color: #4caf50;
+	-webkit-animation-name: flash;
+	animation-name: flash;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+
+
+
+/* Mobile Nav */
+.mobile-nav {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	opacity: 0;
+	background: rgba(255, 255, 255, 0.98);
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+}
+
+.mobile-nav.active {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.mobile-nav ul {
+	display: table-cell;
+	padding: 0;
+	list-style: none;
+	vertical-align: middle;
+}
+
+.mobile-nav ul li {
+	margin: 25px 0;
+}
+
+.mobile-nav ul li a:not(.btn) {
+	color: #aaa;
+}
+
+.mobile-nav a.close-link {
+	font-size: 24px;
+	position: absolute;
+	bottom: 0px;
+	left: calc(50% - 10px);
+	left: 0;
+	width: 100%;
+	padding: 15px 0;
+	color: #fff;
+	background: #00a8ff;
+}
+
+.row.title {
+	padding: 0 20px;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.regular {
+	font-weight: 400;
+}
+
+.bold {
+	font-weight: bold;
+}
+/* Colors */
+
+.white {
+	color: white;
+}
+
+.light-white {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.white-bg {
+	background: white;
+}
+
+.gray-bg {
+	background: #f7f7f7;
+}
+
+.blue {
+	color: #00a8ff;
+}
+
+.blue-bg {
+	background: #00a8ff;
+}
+
+.muted {
+	color: #989da0;
+}
+
+.margin-top {
+	margin-top: 150px;
+}
+
+@media(max-width:992px) {
+	h1 {
+		font-size: 36px;
+	}
+	h2 {
+		font-size: 28px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	h5 {
+		font-size: 16px;
+	}
+	h6 {
+		font-size: 12px;
+	}
+	.section {
+		padding: 30px 0;
+	}
+}
+
+/* Media Queries */
+
+@media(max-width:991px) {
+	.text-center-mobile {
+		text-align: center !important;
+	}
+}
+
+@media(max-width: 768px) {
+	.pricing {
+		margin-bottom: 30px;
+	}
+	.pricings .pricing .info-icon {
+		display: none;
+	}
+	.pricings .pricing .box-main,
+	.pricings .pricing .box-second {
+		left: 0;
+		width: 100%;
+		padding: 50px 50px 0;
+		text-align: left;
+		background: #00a8ff;
+	}
+	.pricings .pricing .box-main.active {
+		background: #00a8ff;
+		-webkit-transform: translateX(0%);
+		-ms-transform: translateX(0%);
+		transform: translateX(0%);
+	}
+	.pricings .pricing .box-second {
+		position: relative;
+		opacity: 1;
+	}
+	.popup-form {
+		width: 100%;
+		margin: 60px auto;
+	}
+	.modal {
+		padding: 0 10px !important;
+	}
+	.popup-form .form-control:not(.dropdown):focus {
+		position: relative;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+}
+
+@media(max-width: 400px) {
+	header .typed-cursor {
+		display: none;
+	}
+	.pricings .pricing .box-second {
+		padding-top: 0;
+	}
+}
